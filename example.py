@@ -48,6 +48,8 @@ if __name__ == '__main__':
     # simulate some trajectories given ground truth parameters
     key, subkey = random.split(key)
     xs, pos = simulate_trajectories(subkey, params)
+    print(f"xs: {xs}")
+    print(f"shape xs: {jnp.shape(xs)}")
 
     # visualize trajectories
     f, ax = plt.subplots()
